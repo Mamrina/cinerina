@@ -27,6 +27,7 @@ function get_footer(string $layout = 'public'): void
 
 /**
  * Create notification alert
+ * 
  * @param string $message The message to save in alert
  * @param string $type The type of alert
  * @return void
@@ -63,5 +64,26 @@ function checkAdmin(array $match, AltoRouter $router)
     if ($existAdmin !== false && empty($_SESSION['user']['id'])) {
         header('Location: ' . $router->generate('login'));
         die;
+    }
+}
+
+function logoutTimer()
+{
+    global $router;
+
+    if (!empty($_SESSION['user']['last_login'])) {
+        $expireHour = 500;
+
+        $now = new DateTime();
+        $now->setTimezone(new DateTimeZone('Europe/Paris'));
+
+        $lastLogin = new DateTime($_SESSION['user']['last_login']);
+
+        if ($now->diff($lastLogin)->i >= $expireHour) {
+            unset($_SESSION['user']);
+            alert('Vous avez été déconnecté pour inactivité', 'danger');
+            header('Location: ' . $router->generate('login'));
+            die;
+        }
     }
 }
