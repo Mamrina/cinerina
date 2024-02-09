@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--active-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+li {
+    list-style-type: none; 
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+}

@@ -1,0 +1,23 @@
+// @use "sass:math";
+
+// /** Font size convert **/
+// @function calculateRem($size) {
+//     $remSize: math.div($size, 16px);
+//     @return #{$remSize}rem;
+// }
+
+// @mixin fontSize($size) {
+//     font-size: $size;
+//     font-size: calculateRem($size);
+// }
+
+// @mixin button {
+//     border-radius: none;
+//     color: var(--black);
+//     font-size: 20px;
+
+//     &:hover,
+//     &:focus {
+//         background-color: red;
+//     }
+// };
