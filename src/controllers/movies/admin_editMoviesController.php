@@ -29,15 +29,14 @@ if (!empty($_POST)) {
             } else {
                 addMovie();
             }
-
             // Redirect to movies list
-            header('Location: ' . $router->generate('listMovies'));
             alert('Le film a bien été ajouté.', 'success');
+            header('Location: ' . $router->generate('listMovies'));
         } else {
-            alert('Ce film existe déjà. Ajout interrompu.');
+            alert('Ce film existe déjà. Ajout interrompu.', 'danger');
         }
     } else {
-        alert('Merci de remplir tous les champs obligatoires.');
+        alert('Merci de remplir tous les champs obligatoires.', 'danger');
     }
 } else if (!empty($_GET['id'])) { // Le film reste dans le champs
     $_POST = (array) getMovie();

@@ -42,19 +42,20 @@ function alert(string $message, string $type = 'danger'): void
 
 /**
  * Display alert session
+ * 
  * @return void
  */
 function displayAlert(): void
 {
     if (!empty($_SESSION['alert'])) {
         echo '<div class="alert alert-' . $_SESSION['alert']['type'] . '" role="alert">' . $_SESSION['alert']['message'] . '</div>';
-
         unset($_SESSION['alert']);
     }
 }
 
 /**
  * Check if user is logged in
+ * 
  * @param array $match The match array from AltoRouter
  * @param AltoRouter $router The router
  */
