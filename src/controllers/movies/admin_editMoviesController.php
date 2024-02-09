@@ -4,11 +4,10 @@
 $errorsMessageMovie = [
     'title' => false,
     'release_date' => false,
+    'duration' => false,
     'synopsis' => false,
     'casting' => false,
-    'duration' => false,
     'director' => false,
-    'poster' => false,
     'note_press' => false
 ];
 
@@ -23,7 +22,7 @@ if (!empty($_POST)) {
     }
 
     // Save movies in database
-    if (!empty($_POST['title']) && !empty($_POST['release_date']) && !empty($_POST['synopsis']) && !empty($_POST['casting']) && !empty($_POST['duration']) && !empty($_POST['director']) && !empty($_POST['note_press'])) {
+    if (!empty($_POST['title']) && !empty($_POST['release_date']) && !empty($_POST['duration']) && !empty($_POST['synopsis']) && !empty($_POST['casting']) && !empty($_POST['director']) && !empty($_POST['note_press'])) {
         if (!array_filter($errorsMessageMovie)) {
             if (!empty($_GET['id'])) {
                 updateMovie('Le film à bien été modifié.');

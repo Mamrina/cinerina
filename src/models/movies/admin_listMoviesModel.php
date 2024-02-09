@@ -7,7 +7,7 @@ function getMovies()
 {
     global $db;
 
-    $sql = 'SELECT id, title, release_date, synopsis, casting, duration, director, note_press FROM movies';
+    $sql = 'SELECT id, title, release_date, duration, synopsis, casting, director, note_press FROM movies';
     $query = $db->prepare($sql);
     $query->execute();
 

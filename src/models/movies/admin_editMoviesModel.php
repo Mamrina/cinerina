@@ -23,15 +23,15 @@ function addMovie(): bool
     $data = [
         'title' => $_POST['title'],
         'release_date' => $_POST['release_date'],
+        'duration' => $_POST['duration'],
         'synopsis' => $_POST['synopsis'],
         'casting' => $_POST['casting'],
-        'duration' => $_POST['duration'],
         'director' => $_POST['director'],
         'note_press' => $_POST['note_press']
     ];
 
     try {
-        $sql = 'INSERT INTO movies (title, release_date, synopsis, casting, duration, director, note_press) VALUES (:title, :release_date, :synopsis, :casting, :duration, :director, :note_press)';
+        $sql = 'INSERT INTO movies (title, release_date, duration, synopsis, casting, director, note_press) VALUES (:title, :release_date, :duration, :synopsis, :casting, :director, :note_press)';
         $query = $db->prepare($sql);
         $query->execute($data);
     } catch (PDOException $e) {
@@ -48,16 +48,16 @@ function updateMovie(string $message)
     $data = [
         'title' => $_POST['title'],
         'release_date' => $_POST['release_date'],
+        'duration' => $_POST['duration'],
         'synopsis' => $_POST['synopsis'],
         'casting' => $_POST['casting'],
-        'duration' => $_POST['duration'],
         'director' => $_POST['director'],
         'note_press' => $_POST['note_press'],
         'id' => $_GET['id']
     ];
 
     try {
-        $sql = 'UPDATE movies SET title = :title, release_date = :release_date, synopsis = :synopsis, casting = :casting, duration = :duration, director = :director, note_press = :note_press WHERE id = :id';
+        $sql = 'UPDATE movies SET title = :title, release_date = :release_date, duration = :duration, synopsis = :synopsis, casting = :casting, director = :director, note_press = :note_press WHERE id = :id';
         $query = $db->prepare($sql);
         $query->execute($data);
     } catch (PDOException $e) {
@@ -76,7 +76,7 @@ function getMovie()
     global $db;
 
     try {
-        $sql = 'SELECT title, release_date, synopsis, casting, duration, director, note_press FROM movies WHERE id = :id';
+        $sql = 'SELECT title, release_date, duration, synopsis, casting, director, note_press FROM movies WHERE id = :id';
         $query = $db->prepare($sql);
         $query->execute(['id' => $_GET['id']]);
 

@@ -11,8 +11,14 @@
         </div>
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('release_date'); ?>
-            <input type="text" name="release_date" value="<?= getValue('release_date'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
+            <input type="date" name="release_date" value="<?= getValue('release_date'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
             <label for="date">Année de sortie *</label>
+            <?= $error['message']; ?>
+        </div>
+        <div class="form-floating mb-3">
+            <?php $error = checkEmptyFields('duration'); ?>
+            <input type="text" name="duration" value="<?= getValue('duration'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
+            <label for="cast">Durée *</label>
             <?= $error['message']; ?>
         </div>
         <div class="form-floating mb-3">
@@ -28,12 +34,6 @@
             <?= $error['message']; ?>
         </div>
         <div class="form-floating mb-3">
-            <?php $error = checkEmptyFields('duration'); ?>
-            <input type="text" name="duration" value="<?= getValue('duration'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
-            <label for="cast">Durée *</label>
-            <?= $error['message']; ?>
-        </div>
-        <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('director'); ?>
             <input type="text" name="director" value="<?= getValue('director'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
             <label for="poster">Réalisation *</label>
@@ -41,11 +41,11 @@
         </div>
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('note_press'); ?>
-            <input type="number" name="notepress" value="<?= getValue('note_press'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
+            <input type="number" name="note_press" value="<?= getValue('note_press'); ?>" class="form-control <?= $error['class']; ?>" placeholder="#">
             <label for="notepress">Note *</label>
             <?= $error['message']; ?>
         </div>
-        <div class="form-floating">
+        <!-- <div class="form-floating">
             <?php $error = checkEmptyFields('categories'); ?>
             <select class="form-select" name="categories" id="floatingSelect" aria-label="Floating label select example">
                 <option selected>Choisir une catégorie *</option>
@@ -54,7 +54,7 @@
                 <option value="3">Fantastique</option>
                 <?= $error['message']; ?>
             </select>
-        </div>
+        </div> -->
         <div>
             <button class="btn btn-success w-100 py-2 mt-3" type="submit">Soumettre</button>
         </div>
