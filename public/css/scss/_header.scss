@@ -1,37 +1,15 @@
 header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 182px;
-    
-    img {
-        width: 451px;
-        height: 182px;
+    color: var(--active-color);
+
+    a {
+        list-style: none;
     }
 
-    .head {
+    .wrap {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
-    .size {
-        margin-right: 40px;
-    }
 }
 
-nav {
-    background-color: var(--active-color);
 
-    .nav-cat {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
-    
-    li {
-        width: 175px;
-        height: 31px;
-        font-weight: bold;
-    }
-}

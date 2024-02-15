@@ -1,7 +1,9 @@
 :root {
-    --primary-color: #1f1e1e;
+    --primary-color:#ffffff;
+    --active-color: #1f1e1e;
 }
 
 // Imports
 @import 'reset';
-@import 'admin.scss';
+@import 'default';
+@import 'header.scss';
