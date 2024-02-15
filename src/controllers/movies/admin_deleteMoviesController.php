@@ -5,5 +5,5 @@ if (!empty($_GET['id']) && !empty(checkExistMovies()->id)) {
 } else {
     alert('Impossible de supprimer cet film.', 'danger');
 }
-header('Location: ' . $router->generate('listMovies'));
+header('Location: ' . $router->generate('listMovie'));
 die;

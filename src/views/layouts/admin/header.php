@@ -24,6 +24,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?= $router->generate('listMovies'); ?>">Films</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= $router->generate('listCategories'); ?>">Catégories</a>
+                        </li>
                     </ul>
                     <div class="navbar-text">
                         <a href="<?= $router->generate('logout'); ?>" class="btn btn-danger">Déconnexion</a>
