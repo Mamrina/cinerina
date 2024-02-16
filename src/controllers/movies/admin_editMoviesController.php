@@ -1,6 +1,6 @@
 <?php
 
-//declaration message d'erreur
+// Déclaration message d'erreur
 $errorsMessageMovie = [
     'title' => false,
     'release_date' => false,

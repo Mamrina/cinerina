@@ -14,8 +14,6 @@ function deleteUser()
         alert('L\'utilisateur a bien été supprimé.', 'success');
     } catch (PDOException $e) {
         if ($_ENV['DEBUG'] == 'true') {
-            // Si je suis en mode débug dump() -> (voir config -> database.php)
-            // dump($e->getMessage());
             die;
         } else {
             alert('Une erreur est survenue. Merci de réessayer plus tard.' . 'danger');

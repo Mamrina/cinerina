@@ -20,7 +20,7 @@
                 <td class="align-middle"><?= htmlentities($user->email); ?></td>
                 <td class="align-middle"><?= htmlentities($user->pseudo); ?></td>
                 <td class="text-center align-middle">
-                    <a class="btn btn-warning" href="<?= $router->generate('editUser', ['id' =>  htmlentities($user->id)]); ?>">Editer</a>
+                    <a class="btn btn-warning mb-3" href="<?= $router->generate('editUser', ['id' =>  htmlentities($user->id)]); ?>">Editer</a>
                     <a class="btn btn-danger" href="<?= $router->generate('deleteUser', ['id' =>  htmlentities($user->id)]); ?>">Supprimer</a>
                 </td>
             </tr>

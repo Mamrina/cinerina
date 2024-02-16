@@ -16,12 +16,12 @@ $router->map('GET|POST', $admin . '/utilisateurs/supprimer/[uuid:id]', 'users/ad
 
 // Movies
 $router->map('GET|POST', $admin . '/films', 'movies/admin_listMovies', 'listMovies');
-$router->map('GET|POST', $admin . '/films/editer/[uuid:id]', 'movies/admin_editMovies', 'editMovie');
+$router->map('GET|POST', $admin . '/films/editer/[i:id]', 'movies/admin_editMovies', 'editMovie');
 $router->map('GET|POST', $admin . '/films/editer', 'movies/admin_editMovies', 'addMovie');
-$router->map('GET|POST', $admin . '/films/supprimer/[uuid:id]', 'movies/admin_deleteMovies', 'deleteMovie');
+$router->map('GET|POST', $admin . '/films/supprimer/[i:id]', 'movies/admin_deleteMovies', 'deleteMovie');
 
 // Categories
 $router->map('GET|POST', $admin . '/categories', 'categories/admin_listCategories', 'listCategories');
-$router->map('GET|POST', $admin . '/categories/editer/[uuid:id]', 'categories/admin_editCategories', 'editCategorie');
+$router->map('GET|POST', $admin . '/categories/editer/[i:id]', 'categories/admin_editCategories', 'editCategorie');
 $router->map('GET|POST', $admin . '/categories/editer', 'categories/admin_editCategories', 'addCategorie');
-$router->map('GET|POST', $admin . '/categories/supprimer/[uuid:id]', 'categories/admin_deleteCaterogies', 'deleteCategorie');
+$router->map('GET|POST', $admin . '/categories/supprimer/[i:id]', 'categories/admin_deleteCategories', 'deleteCategorie');

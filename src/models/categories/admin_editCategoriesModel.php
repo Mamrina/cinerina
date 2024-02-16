@@ -40,7 +40,7 @@ function updateCategorie(string $message)
 {
     global $db;
     $data = [
-        'genre ' => $_POST['genre']
+        'genre' => $_POST['genre']
     ];
 
     try {

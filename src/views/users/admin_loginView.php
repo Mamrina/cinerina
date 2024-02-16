@@ -2,7 +2,7 @@
 
 <div class='d-flex align-items-center'>
     <form action="" method="POST" class="form-signin m-auto">
-        <img src="" alt="Cinérina">
+        <img src="/public/images/logo_cinerina.png" alt="Cinérina">
         <h1 class="mb-3 text-center">Se connecter</h1>
         <div class="form-floating mb-3">
             <input type="email" name="email" class="form-control" placeholder="Email">

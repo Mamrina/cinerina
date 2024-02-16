@@ -1,12 +1,12 @@
 <?php
 
-//declaration message d'erreur
+// Déclaration message d'erreur
 $errorsMessageCategorie = [
     'genre' => false
 ];
 
 if (!empty($_POST)) {
-    // Rules for movie title field
+    // Rules for categories title field
     if (!empty($_POST['genre'])) {
         if (checkExistCategories($_POST['genre'])) {
             $errorsMessageCategorie['genre'] = 'Cette catégorie existe déjà !';
@@ -15,7 +15,7 @@ if (!empty($_POST)) {
         $errorsMessageCategorie['genre'] = 'Le champ du titre est obligatoire.';
     }
 
-    // Save movies in database
+    // Save categories in database
     if (!empty($_POST['genre'])) {
         if (!array_filter($errorsMessageCategorie)) {
             if (!empty($_GET['id'])) {
@@ -24,15 +24,15 @@ if (!empty($_POST)) {
                 addCategorie();
             }
 
-            // Redirect to movies list
-            header('Location: ' . $router->generate('listCategories'));
+            // Redirect to categories list
             alert('La catégorie a bien été ajouté.', 'success');
+            header('Location: ' . $router->generate('listCategories'));
         } else {
-            alert('Cette catégorie existe déjà. Ajout interrompu.');
+            alert('Cette catégorie existe déjà. Ajout interrompu.', 'danger');
         }
     } else {
-        alert('Merci de remplir tous les champs obligatoires.');
+        alert('Merci de remplir tous les champs obligatoires.', 'danger');
     }
-} else if (!empty($_GET['id'])) { // Le film reste dans le champs
+} else if (!empty($_GET['id'])) { // La catégorie reste dans le champs
     $_POST = (array) getCategorie();
 }
