@@ -13,10 +13,10 @@
     <tbody>
         <?php foreach ($categories as $categorie) { ?>
             <tr>
-                <td class="align-middle"><?= $categorie->genre; ?></td>
+                <td class="align-middle"><?= htmlentities($categorie->genre); ?></td>
                 <td class="text-center align-middle">
-                    <a class="btn btn-warning" href="<?= $router->generate('editCategorie', ['id' =>  $categorie->id]); ?>">Editer</a>
-                    <a class="btn btn-danger" href="<?= $router->generate('deleteCategorie', ['id' =>  $categorie->id]); ?>">Supprimer</a>
+                    <a class="btn btn-warning" href="<?= $router->generate('editCategorie', ['id' =>  htmlentities($categorie->id)]); ?>">Editer</a>
+                    <a class="btn btn-danger" href="<?= $router->generate('deleteCategorie', ['id' =>  htmlentities($categorie->id)]); ?>">Supprimer</a>
                 </td>
             </tr>
         <?php } ?>

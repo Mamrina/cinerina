@@ -21,6 +21,9 @@ function deleteUser()
     }
 }
 
+/**
+ * Check if user already exists
+ */
 function getAlreadyExistId()
 {
     try {

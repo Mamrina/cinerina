@@ -7,9 +7,15 @@ function checkExistCategories(): mixed
 {
     global $db;
     $data['genre'] = $_POST['genre'];
-    $sql = 'SELECT genre FROM categories WHERE genre = :genre';
-    $query = $db->prepare($sql);
-    $query->execute($data);
+
+    try {
+        $sql = 'SELECT genre FROM categories WHERE genre = :genre';
+        $query = $db->prepare($sql);
+        $query->execute($data);
+    } catch (PDOException $e) {
+        dump($e->getMessage());
+        die;
+    }
 
     return $query->fetch();
 }
