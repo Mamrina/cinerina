@@ -65,37 +65,18 @@ header {
   background-color: var(--primary-color);
 }
 
-body {
-  background-color: var(--active-color);
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-}
-
 a {
   text-decoration: none;
+  display: block;
 }
 
 li {
-  list-style-type: none;
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 1rem;
-}
-
-header {
-  color: var(--active-color);
-}
-header a {
   list-style: none;
 }
-header .wrap {
+
+nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=main.css.map */
