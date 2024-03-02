@@ -9,7 +9,7 @@
 </head>
 
 <body>
-	<header id="header">
+	<header>
 		<div class="wrap">
 			<div>
 				<a href=""><img src="public/images/logo_cinerina.png" alt="Ciné Rina"></a>
@@ -22,4 +22,14 @@
 				</ul>
 			</div>
 		</div>
+		<nav class="nav-cat">
+			<ul>
+				<li><a href="">action</a></li>
+				<li><a href="">aventure</a></li>
+				<li><a href="">comédie</a></li>
+				<li><a href="">fantastique</a></li>
+				<li><a href="">romance</a></li>
+				<li><a href="">science-fiction</a></li>
+			</ul>
+		</nav>
 	</header>

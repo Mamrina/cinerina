@@ -2,12 +2,13 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: var(--primary-color);
-}
-
 body {
     background-color: var(--active-color);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
 }
 
 a {
