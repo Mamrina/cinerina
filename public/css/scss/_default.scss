@@ -6,6 +6,10 @@ header {
     background-color: var(--primary-color);
 }
 
+body {
+    background-color: var(--active-color);
+}
+
 a {
     text-decoration: none;
     display: block;

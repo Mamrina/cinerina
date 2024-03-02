@@ -9,17 +9,17 @@
 </head>
 
 <body>
-	<header id="header" class="wrapper">
+	<header id="header">
 		<div class="wrap">
-			<div id="logo">
+			<div>
 				<a href=""><img src="public/images/logo_cinerina.png" alt="Ciné Rina"></a>
 			</div>
-			<nav>
-				<ul class="nav-right">
+			<div class="nav-right">
+				<ul>
 					<li><a href="">Accueil</a></li>
 					<li><a href="">Films</a></li>
 					<li><a href="">Se Connecter</a></li>
 				</ul>
-			</nav>
+			</div>
 		</div>
 	</header>

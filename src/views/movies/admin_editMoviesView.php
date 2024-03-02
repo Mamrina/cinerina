@@ -23,7 +23,7 @@
         </div>
         <div class="form-floating mb-3">
             <?php $error = checkEmptyFields('synopsis'); ?>
-            <textarea class="form-control <?= $error['class']; ?>" value="<?= getValue('synopsis'); ?>" name="synopsis" placeholder="Description du film" style="height: 100px" fixed></textarea>
+            <textarea class="form-control <?= $error['class']; ?>" name="synopsis" placeholder="Description du film" style="height: 100px" fixed><?= getValue('synopsis'); ?></textarea>
             <label for="floatingTextarea2">Description *</label>
             <?= $error['message']; ?>
         </div>

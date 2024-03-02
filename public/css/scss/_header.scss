@@ -1,4 +1,14 @@
-nav {
+.wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-right ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-right li {
+        margin-right: 50px;
+    }
 }
